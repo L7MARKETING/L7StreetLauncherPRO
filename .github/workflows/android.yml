@@ -1,0 +1,71 @@
+name: Compilar APK - L7 Street Launcher PRO
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Opcional: assinatura própria de release. Sem esses secrets, o release usa a chave de debug.
+      KEYSTORE_BASE64: ${{ secrets.L7_KEYSTORE_BASE64 }}
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+
+      - name: Instalar Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Preparar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Preparar Gradle (com cache)
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Permissão de execução do gradlew
+        run: chmod +x gradlew
+
+      - name: Preparar keystore de release (opcional)
+        if: env.KEYSTORE_BASE64 != ''
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/l7-release.jks"
+          echo "L7_KEYSTORE_PATH=$RUNNER_TEMP/l7-release.jks" >> "$GITHUB_ENV"
+
+      - name: Compilar APKs (debug e release)
+        env:
+          L7_KEYSTORE_PASSWORD: ${{ secrets.L7_KEYSTORE_PASSWORD }}
+          L7_KEY_ALIAS: ${{ secrets.L7_KEY_ALIAS }}
+          L7_KEY_PASSWORD: ${{ secrets.L7_KEY_PASSWORD }}
+        run: ./gradlew --no-daemon --stacktrace assembleDebug assembleRelease
+
+      - name: Organizar APKs
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/apk/debug/app-debug.apk dist/L7-Street-Launcher-PRO-debug.apk
+          cp app/build/outputs/apk/release/app-release.apk dist/L7-Street-Launcher-PRO-release.apk
+          ls -la dist
+
+      - name: Publicar APKs como artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: L7-Street-Launcher-PRO-APK
+          path: dist/*.apk
+          if-no-files-found: error
+
+      - name: Anexar APKs à Release (somente em tags v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.apk

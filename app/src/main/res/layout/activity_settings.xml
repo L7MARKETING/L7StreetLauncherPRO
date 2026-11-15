@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingsRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/settings_title"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/settingsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/settingsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="24dp">
+
+            <!-- Papel de parede -->
+            <TextView
+                android:id="@+id/titleWallpaper"
+                style="@style/L7SectionTitle"
+                android:layout_marginTop="8dp"
+                android:text="@string/section_wallpaper" />
+
+            <ImageView
+                android:id="@+id/wallPreview"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop" />
+
+            <RadioGroup
+                android:id="@+id/wallGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/wallNeon"
+                    style="@style/L7Option"
+                    android:text="@string/wall_neon" />
+
+                <RadioButton
+                    android:id="@+id/wallCustom"
+                    style="@style/L7Option"
+                    android:text="@string/wall_custom" />
+
+                <RadioButton
+                    android:id="@+id/wallSystem"
+                    style="@style/L7Option"
+                    android:text="@string/wall_system" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/btnPickImage"
+                style="@style/L7ActionButton"
+                android:text="@string/wall_pick" />
+
+            <TextView
+                android:id="@+id/btnSystemWallpaper"
+                style="@style/L7ActionButton"
+                android:text="@string/wall_system_pick" />
+
+            <!-- Cor -->
+            <TextView
+                android:id="@+id/titleColor"
+                style="@style/L7SectionTitle"
+                android:text="@string/section_color" />
+
+            <LinearLayout
+                android:id="@+id/colorRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/colorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <!-- Relógio -->
+            <TextView
+                android:id="@+id/titleClock"
+                style="@style/L7SectionTitle"
+                android:text="@string/section_clock" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw24h"
+                style="@style/L7Option"
+                android:text="@string/clock_24h" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swSeconds"
+                style="@style/L7Option"
+                android:text="@string/clock_seconds" />
+
+            <!-- Ícones -->
+            <TextView
+                android:id="@+id/titleIcons"
+                style="@style/L7SectionTitle"
+                android:text="@string/section_icons" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swNeonFrame"
+                style="@style/L7Option"
+                android:text="@string/icons_neon_frame" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swLabels"
+                style="@style/L7Option"
+                android:text="@string/icons_labels" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/icons_columns"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/columnsGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/colAuto"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/columns_auto"
+                    android:textColor="@color/text_primary" />
+
+                <RadioButton
+                    android:id="@+id/col4"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="4"
+                    android:textColor="@color/text_primary" />
+
+                <RadioButton
+                    android:id="@+id/col5"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:textColor="@color/text_primary" />
+
+                <RadioButton
+                    android:id="@+id/col6"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="6"
+                    android:textColor="@color/text_primary" />
+            </RadioGroup>
+
+            <!-- Sistema -->
+            <TextView
+                android:id="@+id/titleSystem"
+                style="@style/L7SectionTitle"
+                android:text="@string/section_system" />
+
+            <TextView
+                android:id="@+id/defaultStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btnSetDefault"
+                style="@style/L7ActionButton"
+                android:text="@string/btn_set_default" />
+
+            <TextView
+                android:id="@+id/btnAndroidSettings"
+                style="@style/L7ActionButton"
+                android:text="@string/btn_open_android_settings" />
+
+            <TextView
+                android:id="@+id/versionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

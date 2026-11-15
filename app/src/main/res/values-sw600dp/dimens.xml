@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">32dp</dimen>
+    <dimen name="icon_frame">72dp</dimen>
+    <dimen name="label_text">14sp</dimen>
+    <dimen name="clock_text">84sp</dimen>
+    <dimen name="date_text">20sp</dimen>
+    <dimen name="brand_text">42sp</dimen>
+    <dimen name="button_text">17sp</dimen>
+    <dimen name="battery_bar_width">220dp</dimen>
+</resources>

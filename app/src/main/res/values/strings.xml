@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">L7 Street Launcher PRO</string>
+    <string name="brand_title">L7 STREET</string>
+    <string name="brand_subtitle">LAUNCHER PRO</string>
+
+    <string name="favorites_title">FAVORITOS</string>
+    <string name="favorites_empty">Toque e segure um app na gaveta para fixá-lo aqui.</string>
+    <string name="btn_apps">APPS</string>
+    <string name="btn_android">ANDROID</string>
+    <string name="btn_l7">AJUSTES L7</string>
+    <string name="set_default_banner">★ DEFINIR COMO LAUNCHER PADRÃO</string>
+
+    <string name="search_hint">Buscar apps…</string>
+    <string name="close">Fechar</string>
+    <string name="back">Voltar</string>
+    <string name="app_count">%1$d apps instalados</string>
+    <string name="battery_label">BATERIA %1$d%%</string>
+    <string name="battery_label_charging">BATERIA %1$d%% ⚡</string>
+
+    <string name="menu_favorite">Adicionar aos favoritos</string>
+    <string name="menu_unfavorite">Remover dos favoritos</string>
+    <string name="menu_app_info">Informações do app</string>
+    <string name="menu_uninstall">Desinstalar</string>
+    <string name="favorite_added">Adicionado aos favoritos</string>
+    <string name="favorite_removed">Removido dos favoritos</string>
+    <string name="favorites_full">Limite de %1$d favoritos atingido</string>
+    <string name="error_launch">Não foi possível abrir este app</string>
+    <string name="error_open">Não foi possível abrir esta tela</string>
+
+    <string name="settings_title">Ajustes L7</string>
+    <string name="section_wallpaper">PAPEL DE PAREDE</string>
+    <string name="wall_neon">Neon City (padrão do L7)</string>
+    <string name="wall_custom">Imagem personalizada</string>
+    <string name="wall_system">Papel de parede do sistema</string>
+    <string name="wall_pick">Escolher imagem da galeria</string>
+    <string name="wall_system_pick">Trocar papel de parede do sistema</string>
+    <string name="wall_importing">Importando imagem…</string>
+    <string name="wall_imported">Papel de parede aplicado</string>
+    <string name="wall_error">Não foi possível usar esta imagem</string>
+
+    <string name="section_color">COR NEON</string>
+    <string name="color_pink">Rosa Vice</string>
+    <string name="color_cyan">Ciano</string>
+    <string name="color_green">Verde Grove</string>
+    <string name="color_orange">Laranja Sunset</string>
+    <string name="color_purple">Roxo</string>
+    <string name="color_yellow">Amarelo Táxi</string>
+
+    <string name="section_clock">RELÓGIO</string>
+    <string name="clock_24h">Formato 24 horas</string>
+    <string name="clock_seconds">Mostrar segundos</string>
+
+    <string name="section_icons">ÍCONES</string>
+    <string name="icons_neon_frame">Moldura neon nos ícones</string>
+    <string name="icons_labels">Mostrar nomes dos apps</string>
+    <string name="icons_columns">Colunas da gaveta</string>
+    <string name="columns_auto">Auto</string>
+
+    <string name="section_system">SISTEMA</string>
+    <string name="default_yes">L7 Street Launcher PRO é o launcher padrão ✔</string>
+    <string name="default_no">L7 Street Launcher PRO ainda não é o launcher padrão</string>
+    <string name="btn_set_default">Definir como launcher padrão</string>
+    <string name="btn_open_android_settings">Abrir configurações do Android</string>
+    <string name="default_hint">Escolha \"L7 Street Launcher PRO\" e marque \"Sempre\"</string>
+    <string name="version_label">Versão %1$s</string>
+</resources>

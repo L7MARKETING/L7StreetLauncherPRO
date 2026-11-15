@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone adaptativo: monograma "L7" neon dentro da zona segura (66dp centrais). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- brilho -->
+    <path
+        android:pathData="M36,36 L36,70 L52,70"
+        android:strokeColor="#66FF2BD6"
+        android:strokeWidth="11"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M58,38 L76,38 L63,72"
+        android:strokeColor="#6600F0FF"
+        android:strokeWidth="11"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- traço principal -->
+    <path
+        android:pathData="M36,36 L36,70 L52,70"
+        android:strokeColor="#FF2BD6"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M58,38 L76,38 L63,72"
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- linha de horizonte -->
+    <path
+        android:pathData="M32,80 L76,80"
+        android:strokeColor="#FFB000"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+</vector>

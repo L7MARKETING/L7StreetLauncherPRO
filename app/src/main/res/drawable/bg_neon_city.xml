@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Papel de parede padrão "Neon City": pôr do sol synthwave, skyline, palmeiras e grade neon.
+     Arte original em vetor (sem imagens de terceiros). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="780dp"
+    android:viewportWidth="360"
+    android:viewportHeight="780">
+
+    <!-- Céu -->
+    <path android:pathData="M0,0 L360,0 L360,560 L0,560 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0" android:startY="0"
+                android:endX="0" android:endY="560">
+                <item android:offset="0" android:color="#FF07020F" />
+                <item android:offset="0.45" android:color="#FF2A0A55" />
+                <item android:offset="0.8" android:color="#FF8E1A7A" />
+                <item android:offset="1" android:color="#FFFF4D8D" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Estrelas -->
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M30,60h2v2h-2z M95,40h2v2h-2z M150,90h1.5v1.5h-1.5z M210,30h2v2h-2z M280,70h2v2h-2z M330,120h1.5v1.5h-1.5z M60,150h1.5v1.5h-1.5z M250,160h2v2h-2z M180,200h1.5v1.5h-1.5z M20,230h2v2h-2z M320,240h1.5v1.5h-1.5z M120,260h1.5v1.5h-1.5z" />
+
+    <!-- Sol -->
+    <path android:pathData="M90,470 A90,90 0 1,1 270,470 A90,90 0 1,1 90,470 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0" android:startY="380"
+                android:endX="0" android:endY="560">
+                <item android:offset="0" android:color="#FFFFE66B" />
+                <item android:offset="0.5" android:color="#FFFF9A3C" />
+                <item android:offset="1" android:color="#FFFF2BD6" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Faixas do sol -->
+    <path
+        android:fillColor="#FF8E1A7A"
+        android:pathData="M80,478h200v4h-200z M80,494h200v5h-200z M80,510h200v6h-200z M80,526h200v7h-200z M80,542h200v8h-200z" />
+
+    <!-- Skyline (fundo) -->
+    <path
+        android:fillColor="#FF1A0836"
+        android:pathData="M0,560 L0,455 L18,455 L18,430 L40,430 L40,470 L58,470 L58,400 L72,400 L72,385 L86,385 L86,400 L98,400 L98,480 L118,480 L118,445 L136,445 L136,500 L150,500 L150,470 L170,470 L170,430 L182,420 L194,430 L194,490 L214,490 L214,410 L232,410 L232,395 L246,395 L246,410 L262,410 L262,475 L280,475 L280,440 L300,440 L300,395 L318,395 L318,460 L336,460 L336,425 L360,425 L360,560 Z" />
+
+    <!-- Janelas acesas -->
+    <path
+        android:fillColor="#FFFFD36B"
+        android:pathData="M62,412h4v4h-4z M62,424h4v4h-4z M76,412h4v4h-4z M76,436h4v4h-4z M22,440h3v3h-3z M30,452h3v3h-3z M218,420h4v4h-4z M226,432h4v4h-4z M236,420h4v4h-4z M304,406h4v4h-4z M304,420h4v4h-4z M310,434h4v4h-4z M340,436h3v3h-3z M348,448h3v3h-3z" />
+    <path
+        android:fillColor="#FF00F0FF"
+        android:pathData="M90,412h3v3h-3z M68,448h3v3h-3z M240,446h3v3h-3z M250,422h3v3h-3z M286,452h3v3h-3z M122,456h3v3h-3z M176,440h3v3h-3z M186,452h3v3h-3z" />
+
+    <!-- Skyline (frente) -->
+    <path
+        android:fillColor="#FF0A0418"
+        android:pathData="M0,560 L0,505 L26,505 L26,488 L52,488 L52,520 L80,520 L80,498 L104,498 L104,530 L128,530 L128,515 L230,515 L230,528 L254,528 L254,496 L278,496 L278,518 L306,518 L306,490 L334,490 L334,510 L360,510 L360,560 Z" />
+
+    <!-- Chão -->
+    <path android:pathData="M0,560 L360,560 L360,780 L0,780 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0" android:startY="560"
+                android:endX="0" android:endY="780">
+                <item android:offset="0" android:color="#FF1E0638" />
+                <item android:offset="1" android:color="#FF05010A" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Grade neon em perspectiva -->
+    <path
+        android:strokeColor="#99FF2BD6"
+        android:strokeWidth="1.4"
+        android:pathData="M0,572 L360,572 M0,590 L360,590 M0,616 L360,616 M0,652 L360,652 M0,702 L360,702 M0,768 L360,768 M180,560 L-420,780 M180,560 L-180,780 M180,560 L-20,780 M180,560 L100,780 M180,560 L180,780 M180,560 L260,780 M180,560 L380,780 M180,560 L540,780 M180,560 L780,780" />
+
+    <!-- Linha do horizonte -->
+    <path
+        android:strokeColor="#FFFF2BD6"
+        android:strokeWidth="2.5"
+        android:pathData="M0,560 L360,560" />
+
+    <!-- Palmeira esquerda -->
+    <path
+        android:strokeColor="#FF05010A"
+        android:strokeWidth="9"
+        android:strokeLineCap="round"
+        android:pathData="M28,790 C34,700 44,620 64,548" />
+    <path
+        android:fillColor="#FF05010A"
+        android:pathData="M64,548 C40,526 12,526 -6,548 C18,536 40,538 64,552 Z M64,548 C48,516 22,500 0,504 C26,512 46,526 62,552 Z M64,548 C70,512 92,494 118,496 C96,506 80,524 68,552 Z M64,548 C92,528 122,532 140,556 C116,544 92,544 66,554 Z M64,548 C62,520 70,496 84,484 C78,504 74,526 68,550 Z" />
+
+    <!-- Palmeira direita -->
+    <path
+        android:strokeColor="#FF05010A"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:pathData="M336,790 C330,712 322,650 304,588" />
+    <path
+        android:fillColor="#FF05010A"
+        android:pathData="M304,588 C326,566 352,566 368,588 C346,576 326,578 304,592 Z M304,588 C318,558 342,544 366,548 C342,556 322,570 306,592 Z M304,588 C298,556 278,538 254,540 C276,550 290,566 300,592 Z M304,588 C278,570 250,572 232,594 C256,584 278,584 302,594 Z M304,588 C306,562 298,540 286,528 C292,548 296,568 300,590 Z" />
+</vector>
